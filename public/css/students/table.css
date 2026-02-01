@@ -1,0 +1,196 @@
+.students-table-wrapper {
+  margin: 20px 0 30px 0;
+  border-radius: 8px;
+  overflow-x: auto;
+  border: 2px #e0e7e9 solid;
+  box-shadow: 0 2px 8px #00000014;
+  width: 100%;
+}
+
+.students-table {
+  min-width: 300px;
+  border-collapse: collapse;
+  width: 100%;
+  border: none;
+  color: #40425a;
+}
+
+.students-table td > * {
+  vertical-align: middle;
+}
+
+.students-table th,
+.students-table td {
+  padding: 12px 15px;
+  text-align: center;
+  border: none;
+  vertical-align: middle;
+}
+
+.students-table th {
+  background-color: var(--primary-color);
+  /* Darker turquoise */
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  border-right: 2px solid white;
+  height: 60px;
+}
+
+.students-table tr {
+  height: 60px;
+  border-bottom: 2px solid #e1e5e7;
+}
+
+.students-table tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.students-table tr:nth-child(odd):not(:first-child) {
+  background-color: white;
+}
+
+.students-table tr:hover:not(:first-child) {
+  background-color: rgba(0, 160, 160, 0.1);
+}
+
+/* Checkbox styling */
+th input[type="checkbox"],
+td input[type="checkbox"] {
+  height: 18px;
+  width: 18px;
+  cursor: pointer;
+  accent-color: var(--primary-color);
+}
+
+/* Status marker */
+.status-marker {
+  background-color: #4cd964;
+  /* Green for active status */
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  margin: auto;
+  box-shadow: 0 0 0 4px rgba(76, 217, 100, 0.2);
+}
+
+.status-marker {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ccc;  /* Default color */
+}
+
+.status-marker.active {
+  background-color: #4CAF50;  /* Green for active */
+}
+
+.status-marker.inactive {
+  background-color: #dc3232;  /* Red for inactive */
+  box-shadow: 0 0 0 4px rgba(217, 76, 76, 0.2);
+}
+
+.student-options {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  align-items: center; /* Add this to center items vertically */
+}
+
+.student-options-button {
+  height: 32px;
+  width: 32px;
+  border: none;
+  background-color: #f6f6f6;
+  color: var(--primary-color);
+  border-radius: 4px;
+  margin: 0 3px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0; /* Ensure no padding is affecting button size */
+}
+
+.student-options-button:first-child {
+  color: var(--primary-color);
+}
+
+.student-options-button:last-child {
+  color: #dc3232;
+}
+
+.student-options-button:first-child:hover {
+  color: #ffffff;
+  background-color: var(--primary-color);
+}
+
+.student-options-button:last-child:hover {
+  color: #ffffff;
+  background-color: #dc3232;
+}
+
+/* Adding these classes for the Edit and Delete buttons */
+.edit-icon::after {
+  content: "edit";
+  font-family: 'Material Icons';
+  font-size: 18px;
+}
+
+.delete-icon::after {
+  content: "delete";
+  font-family: 'Material Icons';
+  font-size: 18px;
+}
+
+/* Table navigation */
+.table-navigation {
+  margin: 10px auto 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table-navigation-button {
+  width: 36px;
+  height: 36px;
+  margin: 0 4px;
+  border: 1px solid #e0e7e9;
+  background-color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  color: #546e7a;
+}
+
+.table-navigation-button:hover {
+  background-color: rgba(0, 160, 160, 0.2);
+}
+
+.table-navigation-button.active {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+@media (max-width: 900px) {
+  .students-table {
+    font-size: 12px;
+  }
+
+  .students-table th,
+  .students-table td {
+    padding: 10px 8px;
+  }
+
+  .student-options-button {
+    height: 28px;
+    width: 28px;
+    font-size: 12px;
+  }
+}

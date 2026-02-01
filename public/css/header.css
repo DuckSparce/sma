@@ -1,0 +1,301 @@
+/* Reset styles */
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styles */
+.header {
+  position: relative;
+  z-index: 50;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  height: 75px;
+  align-items: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.header-logo a {
+  color: var(--primary-color);
+  text-decoration: none;
+  margin: 20px;
+  font-weight: bold;
+  font-size: 24px;
+  letter-spacing: 1px;
+  background-color: white;
+  padding: 5px 12px;
+  border-radius: 5px;
+  transition: background-color 0.4s;
+}
+
+.header-logo p:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.header-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  margin: 20px;
+}
+
+.notifications-container {
+  position: relative;
+  cursor: pointer;
+}
+
+@keyframes bellRing {
+  0% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(20deg);
+  }
+  30% {
+    transform: rotate(-20deg);
+  }
+  45% {
+    transform: rotate(15deg);
+  }
+  60% {
+    transform: rotate(-10deg);
+  }
+  80% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.notifications {
+  cursor: pointer;
+  position: relative;  /* Added position relative for badge positioning */
+}
+
+.notifications .material-icons:hover {
+  animation: bellRing 0.7s ease;
+}
+
+/* Notification badge style */
+.notification-badge {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 10px;
+  height: 10px;
+  background-color: #ff3b3b;
+  border-radius: 50%;
+  display: block;  /* Always visible by default */
+  border: 1px solid #ffffff;
+}
+
+.notification-badge.hidden {
+  display: none;  /* Hide only when this class is added */
+}
+
+.notification-badge.visible {
+  display: block;
+}
+
+.notifications .material-icons {
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 0.4s;
+}
+
+.notifications .material-icons:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Notification popup styles */
+.notification-popup {
+  position: absolute;
+  top: 40px;
+  right: -120px;
+  width: 400px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  display: none;
+  z-index: 1001;
+  overflow: hidden;
+}
+
+.notifications-container:hover .notification-popup {
+  display: block;
+}
+
+.notification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.notification-header h4 {
+  color: var(--text-color);
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.notification-header a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.notification-header a:hover {
+  text-decoration: underline;
+}
+
+.notification-list {
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.notification-item {
+  display: flex;
+  padding: 12px 15px;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.2s;
+  align-items: flex-start;
+}
+
+.notification-item:last-child {
+  border-bottom: none;
+}
+
+.notification-item:hover {
+  background-color: rgba(0, 160, 160, 0.1);
+}
+
+/* User avatar styles */
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #e6f7f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.avatar-icon {
+  color: var(--primary-color);
+  font-size: 22px;
+}
+
+.notification-content {
+  flex: 1;
+}
+
+.notification-user {
+  color: var(--text-color);
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.notification-text {
+  color: #555;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.header-profile {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: background-color 0.4s;
+  cursor: pointer;
+  font-weight: 500;
+  position: relative; /* Added position relative for dropdown positioning */
+}
+
+.header-profile:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.header-profile .material-icons {
+  font-size: 25px;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 75%;
+  right: 0;
+  width: 172px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+  display: none;
+  z-index: 1002;
+  overflow: hidden;
+}
+
+.header-profile:hover .profile-dropdown {
+  display: block;
+}
+
+.profile-dropdown:before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  right: 20px;
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+
+.profile-dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  border-bottom: 1px solid #f0f0f0;
+  color: var(--text-color);
+  transition: background-color 0.2s;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.profile-dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.profile-dropdown-item:hover {
+  background-color: rgba(0, 160, 160, 0.1);
+}
+
+.profile-dropdown-item .material-icons {
+  font-size: 20px;
+  color: var(--primary-color);
+}
+
+.profile-login-btn {
+  color: white;
+}
+
+@media (max-width: 500px) {
+  .notification-popup {
+    width: 300px;
+    right: -130px;
+  }
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "group": "PZ-21",
+    "first_name": "Nazarii",
+    "last_name": "Dziurakh",
+    "gender": "M",
+    "birthdate": "2006-04-23",
+    "status": "active"
+  },
+  {
+    "id": 2,
+    "group": "PZ-27",
+    "first_name": "Kyryl",
+    "last_name": "Ponomarenko",
+    "gender": "M",
+    "birthdate": "2006-06-20",
+    "status": "inactive"
+  }
+]

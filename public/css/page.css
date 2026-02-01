@@ -1,0 +1,50 @@
+:root {
+  --primary-color: #008484;
+  --text-color: #2d3748;
+}
+
+/* Reset styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+html, body {
+  overflow: hidden !important;
+  height: 100vh;
+  max-height: 100vh;
+} 
+
+body {
+  overflow-y: auto;
+}
+
+.content-page {
+  display: flex;
+  min-height: calc(100vh - 70px);
+  background-color: #ffffff;
+}
+
+/* Main content area */
+.content-container {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  flex: 4;
+  background-color: var(--text-light);
+  padding: 20px;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.page-title {
+  color: #2d3748;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 35px;
+  margin: 5px;
+}

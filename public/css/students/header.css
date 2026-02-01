@@ -1,0 +1,28 @@
+.students-top-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  color: #40425a;
+}
+
+.add-button {
+  border: none;
+  border-radius: 8px;
+  height: 50px;
+  width: 50px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: var(--primary-color);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.4s;
+  /* a little alignment so the "+" is exactly in the center */
+  padding-bottom: 4px; 
+}
+
+.add-button:hover {
+  background-color: rgba(0, 160, 160, 0.75);
+}
