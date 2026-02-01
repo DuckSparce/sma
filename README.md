@@ -196,11 +196,3 @@ php artisan test
 ```bash
 npm run build
 ```
-
-## 📄 License
-
-This project is open-source software licensed under the MIT license.
-
----
-
-**Note**: This is a university project (Semester 4, PVI course) for educational purposes.
