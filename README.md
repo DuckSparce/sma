@@ -160,7 +160,7 @@ sma/
 └── config/                 # Configuration files
 ```
 
-## 🔧 Common Issues
+## Common Issues
 
 ### Issue: `php artisan serve` fails
 **Solution**: Make sure PHP is properly installed and added to PATH. Check PHP version:
@@ -180,7 +180,7 @@ php --version
 ### Issue: Frontend assets not loading
 **Solution**: Run `npm run build` to compile assets, or ensure `npm run dev` is running
 
-## 📝 Development
+## Development
 
 ### Running Tests
 ```bash
